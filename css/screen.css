@@ -58,6 +58,8 @@ body { font-family: "FuturaNewMedium", Arial, sans-serif; font-weight: normal; f
 .section { text-align: center; font-size: 0; min-height: 700px; }
 .section:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .section.section_1 { background: url('../img/bg1.jpg?1409571063'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_1 { background-size: 100% 100%; }
+  .portrait .section.section_1 { background-size: 140% 100%; } }
 .section.section_2 { background: url('../img/bg2.jpg?1409571088'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
 .section.section_2 .section__text { top: 45%; left: 0; }
 .section.section_2 .section__pic { top: 45%; right: 0; }

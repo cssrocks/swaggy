@@ -37,6 +37,10 @@ body
 	&.section_1
 		background: image-url("bg1.jpg")
 		+cover
+		+iphone
+			background-size: 100% 100%
+			.portrait &
+				background-size: 140% 100%
 	&.section_2
 		background: image-url("bg2.jpg")
 		+cover
