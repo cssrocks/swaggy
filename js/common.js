@@ -3,7 +3,7 @@ head.ready(function() {
 
 	viewport.onepage_scroll({
 		 sectionContainer: ".section",
-		 updateURL: true,
+		 updateURL: false,
 		 loop: false
 	});
 

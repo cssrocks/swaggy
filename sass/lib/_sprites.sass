@@ -1,5 +1,22 @@
 //	sprites with padding
 $icons: sprite-map("icons/*.png", $spacing: 10px)
+$icons-retina: sprite-map("icons-retina/*.png", $spacing: 10px)
+
+=sr($sprite)
+	background-image: sprite-url($icons)
+	background-position: sprite-position($icons, $sprite)
+	background-repeat: no-repeat
+	// overflow: hidden
+	// display: block
+	height: image-height(sprite-file($icons, $sprite))
+	width: image-width(sprite-file($icons, $sprite))
+
+	@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3/2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx)
+		background-image: sprite-url($icons-retina)
+		background-size: (image-width(sprite-path($icons-retina)) / 2) (image-height(sprite-path($icons-retina)) / 2)
+		background-position: round(nth(sprite-position($icons-retina, $sprite), 1) / 2) round(nth(sprite-position($icons-retina, $sprite), 2) / 2)
+		height: image-height(sprite-file($icons-retina, $sprite)) / 2
+		width: image-width(sprite-file($icons-retina, $sprite)) / 2
 
 // sized sprites
 =image-size($path)
@@ -30,12 +47,12 @@ $icons: sprite-map("icons/*.png", $spacing: 10px)
 	+image-size(sprite-file($map, $sprite))
 
 //for retina
-=sr($sprite, $map: $icons)
-	background: sprite($map, $sprite) no-repeat
-	$ypos: round(nth(sprite-position($map, $sprite), 2) / 2)
-	background-position: 0 $ypos
-	+image-sizer(sprite-file($map, $sprite))
-	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
+// =sr($sprite, $map: $icons)
+// 	background: sprite($map, $sprite) no-repeat
+// 	$ypos: round(nth(sprite-position($map, $sprite), 2) / 2)
+// 	background-position: 0 $ypos
+// 	+image-sizer(sprite-file($map, $sprite))
+// 	+background-size(ceil(image-width(sprite-path($map)) / 2), ceil(image-height(sprite-path($map)) / 2))
 
 //only image, when dimensions are useless
 =si($sprite, $map: $icons)
