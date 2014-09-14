@@ -55,18 +55,20 @@ body { font-family: "FuturaNewMedium", Arial, sans-serif; font-weight: normal; f
 
 .h1 { font-family: "FuturaNewDemi", Arial, sans-serif; font-weight: normal; font-style: normal; font-size: 32px; color: rgba(255, 255, 255, 0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 22px; }
 
-.section { text-align: center; font-size: 0; min-height: 700px; }
+.section { text-align: center; font-size: 0; min-height: 700px; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
 .section:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
-.section.section_1 { background: url('../img/bg1.jpg?1409571063'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_1 { background-size: 100% 100%; }
-  .portrait .section.section_1 { background-size: 140% 100%; } }
+.section.section_1 { background: url('../img/bg.jpg?1410713759'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_1 { background-attachment: scroll; } }
 .section.section_2 { background: url('../img/bg2.jpg?1409571088'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_2 { background-attachment: scroll; } }
 .section.section_2 .section__text { top: 45%; left: 0; }
 .section.section_2 .section__pic { top: 45%; right: 0; }
 .section.section_3 { background: url('../img/bg3.jpg?1409571107'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_3 { background-attachment: scroll; } }
 .section.section_3 .section__text { top: 45%; right: 0; }
 .section.section_3 .section__pic { top: 45%; left: 0; }
 .section.section_4 { background: url('../img/bg4.jpg?1409571118'); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .section.section_4 { background-attachment: scroll; } }
 .section.section_4 .section__text { top: 53%; left: 0; }
 .section.section_4 .section__pic { top: 45%; right: 0; }
 .section .section__in { position: relative; margin: 0 auto; width: 1010px; display: inline-block; vertical-align: top; font-size: 14px; height: 100%; }
@@ -77,11 +79,15 @@ body { font-family: "FuturaNewMedium", Arial, sans-serif; font-weight: normal; f
 .section .section__pic img { display: block; }
 .section .btn-download { margin-top: 12px; margin-left: -10px; }
 
+.logo { position: absolute; left: 40px; right: 0; text-align: center; top: 32%; text-align: center; }
+.logo img { width: 723px; }
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) { .logo img { width: 666px; } }
+
 .menu { text-align: center; position: absolute; bottom: 25%; left: 0; width: 100%; font-size: 0; }
 .menu li { display: inline-block; padding: 0 20px; }
 .menu a { font-family: "FuturaNewBold", Arial, sans-serif; font-weight: normal; font-style: normal; font-size: 36px; color: white; text-decoration: none; }
 
 .btn-move { position: absolute; bottom: 5%; left: 0; width: 100%; font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; color: white; font-weight: bold; text-decoration: none; font-size: 48px; display: block; text-align: center; }
 
-.btn-download { display: inline-block; vertical-align: top; background-image: url('../img/icons-s39e000f527.png'); background-position: 0 0; background-repeat: no-repeat; height: 64px; width: 207px; font: 0/0 a; text-shadow: none; color: transparent; }
+.btn-download { display: inline-block; vertical-align: top; background-image: url('../img/icons-sb81e58f65b.png'); background-position: 0 -142px; background-repeat: no-repeat; height: 64px; width: 207px; font: 0/0 a; text-shadow: none; color: transparent; }
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 144dppx) { .btn-download { background-image: url('../img/icons-retina-s659b5418d5.png'); background-size: 207px 64px; background-position: 0 0; height: 64px; width: 207px; } }

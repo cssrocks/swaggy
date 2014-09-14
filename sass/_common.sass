@@ -34,16 +34,17 @@ body
 .section
 	+vertical
 	min-height: 700px
+	+gpu
 	&.section_1
-		background: image-url("bg1.jpg")
+		background: image-url("bg.jpg")
 		+cover
 		+iphone
-			background-size: 100% 100%
-			.portrait &
-				background-size: 140% 100%
+			background-attachment: scroll
 	&.section_2
 		background: image-url("bg2.jpg")
 		+cover
+		+iphone
+			background-attachment: scroll
 		.section__text
 			top: 45%
 			left: 0
@@ -53,6 +54,8 @@ body
 	&.section_3
 		background: image-url("bg3.jpg")
 		+cover
+		+iphone
+			background-attachment: scroll
 		.section__text
 			top: 45%
 			right: 0
@@ -62,6 +65,8 @@ body
 	&.section_4
 		background: image-url("bg4.jpg")
 		+cover
+		+iphone
+			background-attachment: scroll
 		.section__text
 			top: 53%
 			left: 0
@@ -94,6 +99,21 @@ body
 	.btn-download
 		margin-top: 12px
 		margin-left: -10px
+
+.logo
+	// +sr(logo)
+	position: absolute
+	left: 40px
+	right: 0
+	text-align: center
+	top: 32%
+	text-align: center
+	img
+		width: 723px
+	+iphone
+		img
+			width: 666px
+		// margin-left: -183px
 
 .menu
 	text-align: center
